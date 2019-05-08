@@ -8,6 +8,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\TaskRepository;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 /**
  * @Route("/task")
@@ -36,6 +38,12 @@ class TaskController extends AbstractController
      */
     public function new(Request $request): Response
     {
+        $form = $this->createFormBuilder()
+                ->add('title', TextType::class)
+                ->add('description', TextareaType::class)
+                ->getForm()
+                ->createView();
+
         $isTokenValid = $this->isCsrfTokenValid('cadastro_tarefas', $request->request->get('_token'));
 
         if ($request->isMethod("POST") && $isTokenValid) {
@@ -51,7 +59,9 @@ class TaskController extends AbstractController
             return $this->redirectToRoute("tasks_show", ["id" => $task->getId()]);
         }
 
-        return $this->render("tasks/new.html.twig");
+        return $this->render("tasks/new.html.twig", [
+            "formulario" => $form
+        ]);
     }
 
      /**
