@@ -1,0 +1,32 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+# home:
+#   path: /
+#   controller: App\Controller\HomeController::index
+
+# tasks_index:
+#   path: /tasks
+#   controller: App\Controller\TaskController::index
+#   methods: [GET]
+
+# tasks_show:
+#   path: /tasks/show/{id}
+#   controller: App\Controller\TaskController::show
+
+# tasks_new:
+#   path: /tasks/new
+#   controller: App\Controller\TaskController::new
+#   methods: [GET, POST]  
+
+# tasks_edit:
+#   path: /tasks/{id}/edit
+#   controller: App\Controller\TaskController::edit
+#   methods: [GET, POST]
+
+# tasks_delete:
+#   path: /tasks/{id}
+#   controller: App\Controller\TaskController::delete
+#   methods: [DELETE]  
+
