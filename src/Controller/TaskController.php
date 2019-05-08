@@ -10,6 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\TaskRepository;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 /**
  * @Route("/task")
@@ -38,18 +39,18 @@ class TaskController extends AbstractController
      */
     public function new(Request $request): Response
     {
-        $form = $this->createFormBuilder()
+        $task = new Task;
+
+        $form = $this->createFormBuilder($task)
                 ->add('title', TextType::class)
                 ->add('description', TextareaType::class)
-                ->getForm()
-                ->createView();
+                ->add('Criar', SubmitType::class)
+                ->getForm();
 
-        $isTokenValid = $this->isCsrfTokenValid('cadastro_tarefas', $request->request->get('_token'));
+        $form->handleRequest($request);
 
-        if ($request->isMethod("POST") && $isTokenValid) {
-            $task = new Task;
-            $task->setTitle($request->request->get("title"));
-            $task->setDescription($request->request->get("description"));
+        if ($form->isSubmitted()) {
+            $task = $form->getData();
             $task->setScheduling(new \DateTime());
     
             $entityManager = $this->getDoctrine()->getManager();
@@ -60,7 +61,7 @@ class TaskController extends AbstractController
         }
 
         return $this->render("tasks/new.html.twig", [
-            "formulario" => $form
+            "formulario" => $form->createView()
         ]);
     }
 
