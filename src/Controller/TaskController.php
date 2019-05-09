@@ -8,9 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\TaskRepository;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use App\Form\TaskType;
 
 /**
  * @Route("/task")
@@ -41,12 +39,7 @@ class TaskController extends AbstractController
     {
         $task = new Task;
 
-        $form = $this->createFormBuilder($task)
-                ->add('title', TextType::class)
-                ->add('description', TextareaType::class)
-                ->add('Criar', SubmitType::class)
-                ->getForm();
-
+        $form = $this->createForm(TaskType::class, $task);
         $form->handleRequest($request);
 
         if ($form->isSubmitted()) {
