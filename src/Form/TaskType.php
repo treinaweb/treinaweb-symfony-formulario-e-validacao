@@ -27,6 +27,11 @@ class TaskType extends AbstractType {
                 'label' => "Título",
                 //'required' => false
             ])
+            ->add('email', TextType::class, [
+                'attr' => ['class' => 'form-control', 'placeholder' => 'Digite o título'],
+                'label' => "Email",
+                'mapped' => false
+            ])
             ->add('description', TextareaType::class, [
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Digite a descrição'],
                 'label' => 'Descrição'
