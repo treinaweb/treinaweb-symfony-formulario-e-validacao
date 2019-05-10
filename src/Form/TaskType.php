@@ -55,8 +55,9 @@ class TaskType extends AbstractType {
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Digite a descrição'],
                 'label' => 'Descrição'
             ])
-            ->add('Criar', SubmitType::class, [
-                'attr' => ['class' => 'btn btn-default']
+            ->add('create', SubmitType::class, [
+                'attr' => ['class' => 'btn btn-default'],
+                'label' => 'Criar'
             ]);
     }
 

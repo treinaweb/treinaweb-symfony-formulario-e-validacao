@@ -1,3 +1,21 @@
 <div class="col-sm-12">
-   {{ form(formulario) }}
+   {{ form_start(formulario) }}
+      {{ form_errors(formulario) }}
+
+      <div class="form-control">
+         <i class="fa fa-calendar"></i> {{ form_label(formulario.title) }}
+         {{ form_widget(formulario.title) }}
+
+         <small>{{ form_help(formulario.title) }}</small>
+
+         <div class="form-error">
+            {{ form_errors(formulario.title) }}
+         </div>
+      </div>    
+
+      {{ form_row(formulario.description) }}
+      {{ form_row(formulario.scheduling) }}
+
+      {{ form_row(formulario.create) }}
+   {{ form_end(formulario, {'render_rest': false}) }}
 </div>
