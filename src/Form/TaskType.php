@@ -9,6 +9,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use App\Entity\Task;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\CountryType;
 
 class TaskType extends AbstractType {
 
@@ -30,6 +32,18 @@ class TaskType extends AbstractType {
             ->add('email', TextType::class, [
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Digite o título'],
                 'label' => "Email",
+                'mapped' => false
+            ])
+            ->add('escolha', ChoiceType::class, [
+                'choices' => [
+                    'descrição1' => 'chave1',
+                    'descrição2' => 'chave2',
+                    'descrição3' => 'chave3',
+                    'descrição4' => 'chave4',
+                ],
+                'attr'          => ['class' => 'form-control'],
+                'placeholder'   => 'Selecione uma Opção',
+                'multiple'      => true,
                 'mapped' => false
             ])
             ->add('description', TextareaType::class, [
