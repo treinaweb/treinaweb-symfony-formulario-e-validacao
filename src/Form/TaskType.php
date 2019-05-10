@@ -11,6 +11,9 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use App\Entity\Task;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CountryType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\TimeType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
 class TaskType extends AbstractType {
 
@@ -45,6 +48,11 @@ class TaskType extends AbstractType {
                 'placeholder'   => 'Selecione uma Opção',
                 'multiple'      => true,
                 'mapped' => false
+            ])
+            ->add('scheduling', DateTimeType::class, [
+                'widget' => 'single_text',
+                'label'  => 'Agendamento',
+                'attr'   => ['class' => 'form-control']
             ])
             ->add('description', TextareaType::class, [
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Digite a descrição'],

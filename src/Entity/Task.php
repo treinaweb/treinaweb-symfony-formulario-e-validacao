@@ -29,7 +29,7 @@ class Task
     /**
      * @ORM\Column(type="datetime")
      */
-    private $Scheduling;
+    private $scheduling;
 
     public function getId(): ?int
     {
@@ -62,12 +62,12 @@ class Task
 
     public function getScheduling(): ?\DateTimeInterface
     {
-        return $this->Scheduling;
+        return $this->scheduling;
     }
 
-    public function setScheduling(\DateTimeInterface $Scheduling): self
+    public function setScheduling(\DateTimeInterface $scheduling): self
     {
-        $this->Scheduling = $Scheduling;
+        $this->scheduling = $scheduling;
 
         return $this;
     }
