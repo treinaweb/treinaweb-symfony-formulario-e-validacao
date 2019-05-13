@@ -12,7 +12,8 @@ use App\Entity\Task;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
-class TaskType extends AbstractType {
+class TaskType extends AbstractType
+{
 
     /**
      * Define campos do formulário
@@ -25,12 +26,12 @@ class TaskType extends AbstractType {
     {
         $builder
             ->add('title', TextType::class, [
-                'attr' => ['class' => 'form-control', 'placeholder' => 'Digite o título'],
+                'attr' => ['placeholder' => 'Digite o título'],
                 'label' => "Título",
                 //'required' => false
             ])
             ->add('email', TextType::class, [
-                'attr' => ['class' => 'form-control', 'placeholder' => 'Digite o título'],
+                'attr' => ['placeholder' => 'Digite o título'],
                 'label' => "Email",
                 'mapped' => false
             ])
@@ -41,7 +42,7 @@ class TaskType extends AbstractType {
                     'descrição3' => 'chave3',
                     'descrição4' => 'chave4',
                 ],
-                'attr'          => ['class' => 'form-control'],
+                'attr'          => [],
                 'placeholder'   => 'Selecione uma Opção',
                 'multiple'      => true,
                 'mapped' => false
@@ -49,10 +50,10 @@ class TaskType extends AbstractType {
             ->add('scheduling', DateTimeType::class, [
                 'widget' => 'single_text',
                 'label'  => 'Agendamento',
-                'attr'   => ['class' => 'form-control']
+                'attr'   => []
             ])
             ->add('description', TextareaType::class, [
-                'attr' => ['class' => 'form-control', 'placeholder' => 'Digite a descrição'],
+                'attr' => ['placeholder' => 'Digite a descrição'],
                 'label' => 'Descrição'
             ])
             ->add('create', SubmitType::class, [
@@ -75,5 +76,4 @@ class TaskType extends AbstractType {
             'required'   => false
         ]);
     }
-
 }
