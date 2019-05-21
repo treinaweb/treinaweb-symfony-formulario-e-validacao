@@ -43,20 +43,9 @@ class TaskController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted()) {
-            
-            $rules = new Assert\Collection([
-                'task' => new Assert\Collection([
-                    'title' => new Assert\Length(['min' => 50]),
-                    'email' => new Assert\Email(),
-                    'priority' => new Assert\NotBlank(),
-                    'scheduling' => new Assert\NotBlank(),
-                    'create' => new Assert\Blank(),
-                    '_token' => new Assert\NotBlank(),
-                    'description' => new Assert\NotBlank(),
-                ])
-            ]);
+            $task = $form->getData();
 
-            $errors = $validator->validate($request->request->all(), $rules);
+            $errors = $validator->validate($task);
 
             if (count($errors) > 0) {
                 return $this->render("tasks/new.html.twig", [
@@ -65,8 +54,6 @@ class TaskController extends AbstractController
                 ]);
             }
 
-            $task = $form->getData();
-    
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($task);
             $entityManager->flush();
