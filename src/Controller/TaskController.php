@@ -9,6 +9,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\TaskRepository;
 use App\Form\TaskType;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @Route("/task")
@@ -35,12 +37,29 @@ class TaskController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    public function new(Request $request): Response
+    public function new(Request $request, ValidatorInterface $validator): Response
     {
         $form = $this->createForm(TaskType::class);
         $form->handleRequest($request);
 
         if ($form->isSubmitted()) {
+            
+            $rules = new Assert\Collection([
+                'task' => new Assert\Collection([
+                    'title' => new Assert\Length(['min' => 50]),
+                    'email' => new Assert\Email(),
+                    'priority' => new Assert\NotBlank(),
+                    'scheduling' => new Assert\NotBlank(),
+                    'create' => new Assert\Blank(),
+                    '_token' => new Assert\NotBlank(),
+                    'description' => new Assert\NotBlank(),
+                ])
+            ]);
+
+            $errors = $validator->validate($request->request->all(), $rules);
+
+            dd($errors);
+
             $task = $form->getData();
     
             $entityManager = $this->getDoctrine()->getManager();
