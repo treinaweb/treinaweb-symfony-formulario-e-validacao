@@ -58,7 +58,12 @@ class TaskController extends AbstractController
 
             $errors = $validator->validate($request->request->all(), $rules);
 
-            dd($errors);
+            if (count($errors) > 0) {
+                return $this->render("tasks/new.html.twig", [
+                    "formulario" => $form->createView(),
+                    'errors'     => $errors
+                ]);
+            }
 
             $task = $form->getData();
     
