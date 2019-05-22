@@ -7,5 +7,11 @@
 {% block body %}
     <h1>Criar Tarefa</h1>
 
-    {{ include("tasks/_form3.html.twig") }}
+    <div class="col-sm-12">
+        {{ form_start(formulario) }}
+            {{ form_widget(formulario) }}
+
+            <input type="submit" class="btn" value="Criar"/>
+        {{ form_end(formulario) }}
+    </div>
 {% endblock %}

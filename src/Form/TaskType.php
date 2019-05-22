@@ -29,12 +29,6 @@ class TaskType extends AbstractType
                 'label' => "Título",
                 //'required' => false
             ])
-            ->add('email', TextType::class, [
-                'attr' => ['placeholder' => 'Digite o título'],
-                'label' => "Email",
-                'mapped' => false
-            ])
-            ->add('priority', PriorityType::class)
             ->add('scheduling', DateTimeType::class, [
                 'widget' => 'single_text',
                 'label'  => 'Agendamento',
@@ -43,10 +37,6 @@ class TaskType extends AbstractType
             ->add('description', TextareaType::class, [
                 'attr' => ['placeholder' => 'Digite a descrição'],
                 'label' => 'Descrição'
-            ])
-            ->add('create', SubmitType::class, [
-                'attr' => ['class' => 'btn btn-default'],
-                'label' => 'Criar'
             ]);
     }
 

@@ -21,7 +21,7 @@ class Task
     /**
      * @ORM\Column(type="string", length=100)
      * @Assert\Length(
-     *      min = 50,
+     *      min = 5,
      *      minMessage = "length.min"
      * )
      * @HasString(
