@@ -21,7 +21,8 @@ class Task
     /**
      * @ORM\Column(type="string", length=100)
      * @Assert\Length(
-     *      min = 50
+     *      min = 50,
+     *      minMessage = "length.min"
      * )
      * @HasString(
      *      string = "Elton"
@@ -31,15 +32,15 @@ class Task
 
     /**
      * @ORM\Column(type="text")
-     * @Assert\NotBlank
+     * @Assert\NotBlank(message="task.description.not_blank")
      */
     private $description;
 
     /**
      * @ORM\Column(type="datetime")
-     * @Assert\NotBlank
-     * @Assert\GreaterThanOrEqual("today")
-     * @Assert\DateTime
+     * @Assert\NotBlank(message="not_blank")
+     * @Assert\GreaterThanOrEqual("today", message= "task.scheduling.greater_than_or_equal")
+     * @Assert\DateTime(message="date_time")
      */
     private $scheduling;
 
