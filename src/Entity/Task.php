@@ -34,6 +34,8 @@ class Task
     /**
      * @ORM\Column(type="datetime")
      * @Assert\NotBlank
+     * @Assert\GreaterThanOrEqual("today")
+     * @Assert\DateTime
      */
     private $scheduling;
 
