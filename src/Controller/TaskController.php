@@ -42,17 +42,8 @@ class TaskController extends AbstractController
         $form = $this->createForm(TaskType::class);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $task = $form->getData();
-
-            $errors = $validator->validate($task);
-
-            if (count($errors) > 0) {
-                return $this->render("tasks/new.html.twig", [
-                    "formulario" => $form->createView(),
-                    'errors'     => $errors
-                ]);
-            }
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($task);
