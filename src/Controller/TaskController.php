@@ -37,7 +37,7 @@ class TaskController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    public function new(Request $request, ValidatorInterface $validator): Response
+    public function new(Request $request): Response
     {
         $form = $this->createForm(TaskType::class);
         $form->handleRequest($request);
@@ -82,19 +82,18 @@ class TaskController extends AbstractController
      */
     public function edit(Request $request, Task $task): Response
     {
-        $isTokenValid = $this->isCsrfTokenValid('cadastro_tarefas', $request->request->get('_token'));
+        $form = $this->createForm(TaskType::class, $task);
+        $form->handleRequest($request);
 
-        if ($request->isMethod("POST") && $isTokenValid) {
-            $task->setTitle($request->request->get("title"));
-            $task->setDescription($request->request->get("description"));
-
+        if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute("tasks_show", ["id" => $task->getId()]);
         }
 
         return $this->render("tasks/edit.html.twig", [
-            "task" => $task
+            "task" => $task,
+            "formulario" => $form->createView()
         ]);
     }
 
