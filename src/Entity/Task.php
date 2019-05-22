@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use App\Validator\HasString;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\TaskRepository")
@@ -22,6 +23,7 @@ class Task
      * @Assert\Length(
      *      min = 50
      * )
+     * @HasString
      */
     private $title;
 
