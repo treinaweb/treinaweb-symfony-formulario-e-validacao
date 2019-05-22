@@ -23,7 +23,9 @@ class Task
      * @Assert\Length(
      *      min = 50
      * )
-     * @HasString
+     * @HasString(
+     *      string = "Elton"
+     * )
      */
     private $title;
 
