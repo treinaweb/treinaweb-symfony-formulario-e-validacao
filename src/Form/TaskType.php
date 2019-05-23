@@ -10,6 +10,8 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use App\Entity\Task;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Validator\Constraints\File;
 
 class TaskType extends AbstractType
 {
@@ -37,6 +39,15 @@ class TaskType extends AbstractType
             ->add('description', TextareaType::class, [
                 'attr' => ['placeholder' => 'Digite a descrição'],
                 'label' => 'Descrição'
+            ])
+            ->add('attachment', FileType::class, [
+                'mapped' => false,
+                'constraints' => [
+                    new File([
+                        'maxSize'   => '2M',
+                        "mimeTypes" => 'application/pdf'
+                    ])
+                ]
             ]);
     }
 

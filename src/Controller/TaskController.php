@@ -43,6 +43,9 @@ class TaskController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $file = $form['attachment']->getData();
+            $file->move('files', $file->getClientOriginalName());
+
             $task = $form->getData();
 
             $entityManager = $this->getDoctrine()->getManager();
