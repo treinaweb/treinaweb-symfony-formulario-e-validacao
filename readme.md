@@ -1,0 +1,33 @@
+# TreinaWeb: curso ["Symfony - Formulários e Validações"](https://www.treinaweb.com.br/curso/symfony-formularios-e-validacoes)
+
+#### Lista de commits
+Aula | Video | Commit | Link 
+------ | ------ | ------ | ------ 
+Aula | | projeto inicial do curso | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/80275957a99cfe225baaa9531bc01794142e149f.zip) 
+Aula 02 | Criando o primeiro formulário
+ | 04 - Criando primeiro formulario | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/474af065515b1d3f41eb37e0c96cb30b2f690a1b.zip) 
+Aula 02 | Tratando a submissão do formulário | 05 - Popular a entidade via formulário | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/050aac7f3d5d7080637a49b7a97a635cd1546f48.zip) 
+Aula 03 | Criando classe própria para formulário | 06 - Criando classe própria para formulário | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/ebf00acd0b3b12feb462c5369806bf785b3a9a1b.zip) 
+Aula 03 | Definindo entidade padrão para o formulário | 07 - Definindo entidade padrão para form | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/f75e2607e9af102d8587c1b30a96964ff3f01be7.zip) 
+Aula 04 | Configurando as opções dos campos | 08 - Definindo opções para os campos | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/935f63abefea26da303d385909c8dd0b1e0321f9.zip) 
+Aula 04 | Escolhendo os campos que serão mapeados para a entidade | 09 - Escolhendo os campos que serão mapeados para a entidade | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/bd4ea5be9bcc238eceec8e050d9b4d46458a9540.zip) 
+Aula 04 | Campos do tipo escolha | 11 - Conhecendo campos de escolha | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/cf728bef0521e3c45a124808c253212a05371dc0.zip) 
+Aula 04 | Campos do tipo data e hora | 12 - conhecendo os campos do tipo data e hora | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/92cb69ed39d8b8a63366395f0c2494fa8a9c772a.zip) 
+Aula 04 | Outros tipos de campos | 13 - conhecendo os demais tipos de campos | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/fe747cbffb520d73d38f0b08eba115c10e6aec02.zip) 
+Aula 05 | Configurações globais do formulário | 14 - Configurações globais do formulário | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/d18ac0435cc1212918b8b2378a152bdc86decbf4.zip) 
+Aula 05 | Helpers de impressão de formulário | 15 - Helpers de impressão de formulário | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/ff9f750ffd94eac08cfe2f540223ff46186317c6.zip) 
+Aula 05 | Usando temas no formulário | 16 - Usando temas no formulário | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/19937593017491aa101103849e1e800661c862b7.zip) 
+Aula 05 | Criando novos temas | 17 - Criando novos temas para formulário | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/120edd9b7438d452bceff730644a8e68ea00606e.zip) 
+Aula 05 | Criando novos tipos para campos | 18 - Criando tipos personalizados de campos | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/76d7fdaa18526cdf15b052d8f83c5170acc5bcc1.zip) 
+Aula 06 | Usando o validador de forma manual | 19 - Usando o validador de forma manual | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/9f201001da1db53f1f70a316ba78e3cc2c79b2a9.zip) 
+Aula 06 | Mostrando mensagens de validação | 20 - Mostrando mensagens de validação | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/e996e5a5684d50b4c01c13ca870257afa48bcdbf.zip) 
+Aula 06 | Definindo as regras de validação via entidade | 21 - Usando o validador via entidade | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/ac6d0bc4e07fde2d86d5444141b9050c2eb21fe5.zip) 
+Aula 06 | Explorando as regras de validação | 22 - Explorando as regras de validação | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/d56210920b7b3dc1911765af502feadd5ad622c2.zip) 
+Aula 06 | Criando regras de validação personalizadas | 23 - Criando regra de validação personalizada | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/52532c58f64c95fd7f1e2e99d739732fe924dfe9.zip) 
+Aula 06 | Melhorando a regra de validação personalizada | 24 - Recebendo parametros na validação e melhorando a segurança | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/d29b286ee79b8b69b988dff5be98ac45474eec12.zip) 
+Aula 06 | Traduzindo mensagens de validação | 25 - Traduzindo as mensagens de validação | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/797350593e95878597adea5ba77d6fd22bcbb2d6.zip) 
+Aula 07 | Validação automática e CSRF Token | 26 - Validação automatica e CSRF Token | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/d5b964a5663ceae5195b3cfce39335864c372978.zip) 
+Aula 07 | Boas práticas ao utilizar componente de formulário | 27 - Boas práticas ao utilizar o componente Form | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/739c5b215e5d9231fb33ed892fb577453eaf3c47.zip) 
+Aula 07 | Implementando a edição de tarefas | 28 - Implementando a edição de tarefas | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/d139537ac992f1f658188978ee94449c0816adde.zip) 
+Aula 07 | Trabalhando com arquivo | 30 - Trabalhando com arquivos | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/5bf1cda3d73e7954c42809c16d12b0df285adbe2.zip) 
+Aula 07 | Comandos úteis para trabalhar com formulários | 31 – Comandos úteis para trabalhar com form | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/566a1eb68c79dd16121897604823703845aac950.zip) 
