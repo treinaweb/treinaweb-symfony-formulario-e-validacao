@@ -4,8 +4,7 @@
 Aula | Video | Commit | Link 
 ------ | ------ | ------ | ------ 
 Aula | | projeto inicial do curso | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/80275957a99cfe225baaa9531bc01794142e149f.zip) 
-Aula 02 | Criando o primeiro formulário
- | 04 - Criando primeiro formulario | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/474af065515b1d3f41eb37e0c96cb30b2f690a1b.zip) 
+Aula 02 | Criando o primeiro formulário | 04 - Criando primeiro formulario | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/474af065515b1d3f41eb37e0c96cb30b2f690a1b.zip) 
 Aula 02 | Tratando a submissão do formulário | 05 - Popular a entidade via formulário | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/050aac7f3d5d7080637a49b7a97a635cd1546f48.zip) 
 Aula 03 | Criando classe própria para formulário | 06 - Criando classe própria para formulário | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/ebf00acd0b3b12feb462c5369806bf785b3a9a1b.zip) 
 Aula 03 | Definindo entidade padrão para o formulário | 07 - Definindo entidade padrão para form | [Download](https://github.com/treinaweb/treinaweb-symfony-formulario-e-validacao/archive/f75e2607e9af102d8587c1b30a96964ff3f01be7.zip) 
